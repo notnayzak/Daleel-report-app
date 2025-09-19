@@ -13,8 +13,8 @@ The goal is to make information accessible for future users through real shared 
 - Flutter mobile app for easy user access.
 - Cybersecurity-first approach to protect user data.
 
---
----
+
+-----------
 ## 📍 Citizen Reporting Module
 
 Citizens often face challenges when reporting local issues (potholes, damaged infrastructure, violations).  
