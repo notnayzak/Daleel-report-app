@@ -1,13 +1,25 @@
-# Daleel — Architecture
+# Daleel + Citizen Reports Architecture
 
 ```mermaid
 flowchart LR
-    U["👤 User"] --> W["🌐 Web Dashboard"]
-    U --> M["📱 Mobile App (Flutter)"]
-    W --> B["⚙️ Backend (API + Logic)"]
+    %% Users
+    U[Citizen] --> W[Web Dashboard]
+    U --> M[Mobile App]
+
+    %% Daleel Core
+    W --> B[Backend]
     M --> B
-    B --> D["🗄️ Database (MongoDB / Postgres)"]
-    B --> AI["🤖 Data Science & AI (Sentiment Analysis, Insights)"]
-    B --> S["🔐 Cybersecurity & Network (Security Audits, Pen Testing)"]
-    AI --> DOCS["📄 Documentation & Reports"]
+    B --> D[Database]
+    B --> AI[Data Science & AI]
+    B --> S[Cybersecurity]
+
+    %% Daleel Module
+    B --> E[Experience Sharing Module]
+
+    %% Citizen Reports Module
+    B --> R[Citizen Reports Module]
+    R --> OFF[Officials Dashboard]
+
+    %% Docs & Analytics
+    AI --> DOCS[Reports & Insights]
     S --> DOCS
